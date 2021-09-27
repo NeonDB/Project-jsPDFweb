@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSPDF</title>
+    <link href="http://raw.githack.com/MrRio/jsPDF/master/test/reference/PTSans.ttf" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="choosen.js"></script>
+</head>
+<body>
+    <div class="container">
+
+        <div class="checkboxes_block" >
+            <input type="checkbox" name="" id="check_part1" onclick=chooseparts1()>
+            <p class="checkboxes_namefield" id="checkbox1">Part_1</p>
+            <input type="checkbox" name="" id="check_part2" onclick=chooseparts2()>
+            <p class="checkboxes_namefield" id="checkbox2">Part_2</p>
+            <input type="checkbox" name="" id="check_part3" onclick=chooseparts3()>
+            <p class="checkboxes_namefield" id="checkbox3">Part_3</p>
+            <input type="checkbox" name="" id="check_part4">
+            <p class="checkboxes_namefield" id="checkbox4">Part_4</p>
+            <input type="checkbox" name="" id="check_part5">
+            <p class="checkboxes_namefield" id="checkbox5">Part_5</p>
+            <input type="checkbox" name="" id="check_part6">
+            <p class="checkboxes_namefield" id="checkbox6">Part_6</p>
+            <input type="checkbox" name="" id="check_part7">
+            <p class="checkboxes_namefield" id="checkbox7">Part_7</p>
+            <input type="checkbox" name="" id="check_part8">
+            <p class="checkboxes_namefield" id="checkbox8">Part_8</p>
+            <input type="checkbox" name="" id="check_part9">
+            <p class="checkboxes_namefield" id="checkbox9">Part_9</p>
+            <input type="checkbox" name="" id="check_part10">
+            <p class="checkboxes_namefield" id="checkbox10">Part_10</p>
+        </div>
+        <div class="btn">
+            <button type="submit" name="submit" onclick=downloadPDF()>Submit</button>
+        </div>
+        <div class="container_text">
+            <div class="container_block visible_element container_block1">
+                <h1>EXAMUS</h1>
+                <h2>ИНСТРУКЦИЯ ДЛЯ ПОЛЬЗОВАТЕЛЕЙ</h2>
+                <h4>АСИНХРОННЫЙ ПРОКТОРИНГ</h4>
+                    <h2>ПОРЯДОК ПРОХОЖДЕНИЯ ЭКЗАМЕНА С ИСПОЛЬЗОВАНИЕМ СЕРВИСА EXAMUS</h2>
+                    <ul>
+                        <li>
+                            	Перейдите по ссылке, предоставленной организатором тестирования. При необходимости авторизуйтесь в Examus.
+                        </li>
+                        <li>
+                            	При необходимости запишитесь в слот определённое время для сдачи экзамена в Календаре.
+
+                        </li>
+                        <li>
+                            	В день сдачи экзамена нажмите на кнопку с названием теста, на который Вы записаны.
+
+                        </li>
+                        <li>
+                            	Сфотографируйте и отправьте документ, подтверждающий Вашу личность.
+
+                        </li>
+                        <li>
+                            	Начините экзамен.
+
+                        </li>
+                    </ul>
+                    <h2>ТЕХНИЧЕСКИЕ ТРЕБОВАНИЯ</h2>
+                    
+                    <h3>Стационарный компьютер или ноутбук (планшеты, смартфоны и иные мобильные устройства не поддерживаются), конфигурация компьютера: </h3>
+                    <ul>
+                        <li>
+                            	Процессор - Intel Core 2 DUO или AMD Athlon x2, либо более новые модели с поддержкой SSE3, с 2 ядрами и больше, и частотой 1,8 ГГц и выше;
+                        </li>
+                        <li>
+                            	Оперативная память - 4 ГБ и больше;
+                        </li>
+                        <li>
+                            	Свободное место на диске - 500 МБ;
+                        </li>
+                    </ul>
+                    <h3>Операционная система:</h3>
+                    <ul>
+                        <li>
+                            	Windows 7 Home Basic / Windows 8 / Windows 10 Home или более полные издания;
+
+                        </li>
+                        <li>
+                            	macOS версии 10.11 или выше - для Google Chrome; либо версии 10.12 и выше - для Яндекс.Браузер или Microsoft Edge;
+
+                        </li>
+                        <li>
+                            	Ubuntu 14.04 (x64) или более поздней версии;
+
+                        </li>
+                        <li>
+                            	Debian 8 (x64)  или более поздней версии;
+
+                        </li>
+                        <li>
+                            	OpenSUSE 13.3 (x64)  или более поздней версии;
+
+                        </li>
+                        <li>
+                            	Fedora Linux 24 (x64) или более поздней версии;
+
+                        </li>
+                    </ul>
+                    <h3>Установленный браузер (на выбор):</h3>
+                    <ul>
+                        <li>
+                            	Chrome последней версии;
+
+                        </li>
+                        <li>
+                            	Yandex.Browser последней версии;
+
+                        </li>
+                        <li>
+                            	Edge последней версии;
+
+                        </li>
+                        <li>
+                            	Наличие интернет-соединения со стабильной скоростью передачи данных от пользователя не ниже 1 Мбит/с (рекомендовано - 5 Мбит\с). 
+
+                        </li>
+                        <li>
+                            	Наличие исправной и включенной фронтальной веб-камеры (включая встроенные в ноутбуки) с разрешением 640х480 и выше;
+
+                        </li>
+                        <li>
+                            	Наличие исправного и включенного микрофона (включая встроенные в ноутбуки);
+
+                        </li>
+                        <li>
+                            	Разрешена передача данных по сетевым портам: 80 TCP, 443 TCP, 3478 TCP/UDP
+
+                        </li>
+                    </ul>
+            </div>
+            <div class="container_block visible_element container_block2">
+                <p class="textarea"> 
+                    <h2>РАБОТА С EXAMUS</h2>
+                    <h3>Подготовка рабочего места</h3>
+                    <h3>ПЕРЕД ЭКЗАМЕНОМ НЕОБХОДИМО ПРОВЕСТИ СЛЕДУЮЩИЕ ШАГИ:</h3>
+                    <span>                         
+                        Обеспечьте хорошую освещенность в комнате.
+                    
+                    </span>
+                    <span>
+                        Проверьте наличие интернет-соединения. 
+
+                    </span>
+                    <span>
+                        Проверьте, что камера и микрофон включены, а объектив камеры не закрыт.
+
+                    </span>
+                    <span>
+                        Подготовьте документ для идентификации личности.
+
+                    </span>
+                    <span>
+                        Включите ноутбук в сеть (питание от батареи иногда снижает производительность устройства).
+
+                    </span>
+                    <span>
+                        Перезагрузите компьютер для обеспечения максимальной производительности.
+
+                    </span>
+                    <span>
+                        Выключите все ненужные программы, расширения и вкладки в браузере.
+
+                    </span>
+                    <span>
+                        Отключите и уберите наушники, книги и конспекты (если только они не  разрешены правилами экзамена)
+
+                    </span>
+                    <span>
+                        Отключите дублирующие мониторы, мышки, клавиатуры (если есть)
+
+                    </span>
+                        
+                        
+                </p>
+            </div>
+            <div class="container_block visible_element container_block3">
+                <p class="textarea">
+                    <h2>НАЧАЛО ЭКЗАМЕНА</h2>
+                    <ul>
+                        <li>
+                            	Выберите нужный экзамен и нажмите на кнопку «Приступить»
+                            Обратите внимание, кнопка «Приступить» доступна за 15 минут до начала тестирования, но сам экзамен доступен ровно в назначенное время.
+    
+                        </li>
+                        <li>
+                            	Прочтите порядок прохождения и подтвердите своё согласие. На почту придёт согласие на обработку персональных данных, необходимое для прохождения прокторинга.
+
+                        </li>
+                    </ul>
+                    При возникновении проблем с началом экзамена см. раздел Проблемы с началом экзамена.
+                </p>
+            </div>
+            <div class="container_block container_block4">
+                Смысловая_часть_4
+            </div>
+            <!-- <div class="container_block5">
+                <p class="textarea">Смысловая_часть_5</p>
+            </div>
+            <div class="container_block6">
+                <p class="textarea">Смысловая_часть_6</p>
+            </div>
+            <div class="container_block7">
+                <p class="textarea">Смысловая_часть_7</p>
+            </div>
+            <div class="container_block8">
+                <p class="textarea">Смысловая_часть_8</p>
+            </div>
+            <div class="container_block9">
+                <p class="textarea">Смысловая_часть_9</p>
+            </div>
+            <div class="container_block10">
+                <p class="textarea">Смысловая_часть_10</p>
+            </div> -->
+        </div>
+    </div>
+</body>
+<script>
+    let check = document.getElementsByTagName("input")
+    let submitbtn = document.getElementsByName("submit")
+    let parts = document.getElementsByName("container")
+
+
+    window.jsPDF = window.jspdf.jsPDF;
+    function downloadPDF() {
+        let doc = new jsPDF('p', 'px', [1240, 1500])
+        doc.addFont("http://raw.githack.com/MrRio/jsPDF/master/test/reference/PTSans.ttf", "PTSans", "normal");
+        doc.setFont("PTSans"); // set font
+        doc.setFontSize(15);
+
+        doc.html(document.querySelector("div.container_block"), {
+            "width": 220,
+            callback: function (doc) {
+            doc.save();
+                
+        },
+        x:10,
+        y:10,
+        })
+        }
+
+</script>
+</html>
+
