@@ -234,13 +234,13 @@
 
     window.jsPDF = window.jspdf.jsPDF;
     function downloadPDF() {
-        let doc = new jsPDF('p', 'px', [1240, 1500])
+        let doc = new jsPDF('p', 'mm', [210, 297])
         doc.addFont("http://raw.githack.com/MrRio/jsPDF/master/test/reference/PTSans.ttf", "PTSans", "normal");
         doc.setFont("PTSans"); // set font
-        doc.setFontSize(15);
+        doc.setFontSize(20)
 
         doc.html(document.querySelector("div.container_block"), {
-            "width": 220,
+            
             callback: function (doc) {
             doc.save();
                 
@@ -248,6 +248,9 @@
         x:10,
         y:10,
         })
+        doc.addPage("a4", "p");
+        doc.text("Do you like that?", 20, 20);
+
         }
 
 </script>
