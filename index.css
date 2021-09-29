@@ -1,10 +1,18 @@
 body {
     font-family: 'PTSans', sans-serif;
-    font-size: 4px
+    font-size: 15px;
+    
+}
+ul {
+    list-style-position: inside;
+    padding-left: 0;
+}​
+hr {
+    size: 1px;
 }
 .container {
     margin:0 auto; 
-    width: 1024px;
+    max-width: 640px;
 }
 .checkboxes_block {
     display: flex; 
@@ -15,4 +23,12 @@ body {
 }
 .visible_element {
     display: block;
+    font-size: 3px;
+}
+.container_block {
+    max-width: 180px;
+    min-height: 290px;
+}
+.container_text {
+    max-width: 180px;
 }
