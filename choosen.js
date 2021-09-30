@@ -1,50 +1,75 @@
-function chooseparts1() {
-    let textdata = document.querySelector("div.container_block1")
+function asyncblock_toggle() {
+    let textdata = document.querySelectorAll("div.container_async")
+    textdata.forEach((textdata) => {
+        textdata.classList.toggle("visible_element")
+    })
+    textdata.forEach((textdata) => {
+        textdata.classList.toggle("hidenseek_element")
+    })
+}
+function syncblock_toggle() {
+    let textdata = document.querySelectorAll("div.container_sync")
+    textdata.forEach((textdata) => {
+        textdata.classList.toggle("visible_element")
+    })
+    textdata.forEach((textdata) => {
+        textdata.classList.toggle("hidenseek_element")
+    })
+}
+function twice_camera_toggle() {
+    let textdata = document.querySelector("div.container_camera")
         textdata.classList.toggle("visible_element")
         textdata.classList.toggle("hidenseek_element")
 }
-function chooseparts2() {
-    let textdata = document.querySelector("div.container_block2")
+function slot_entry_toggle() {
+    let textdata = document.querySelector("div.container_slot_entry")
         textdata.classList.toggle("visible_element")
         textdata.classList.toggle("hidenseek_element")
 }
-function chooseparts3() {
-    let textdata = document.querySelector("div.container_block3")
+function bioidendifity_Examus_toggle() {
+    let textdata = document.querySelector("div.container_blockExamus")
         textdata.classList.toggle("visible_element")
         textdata.classList.toggle("hidenseek_element")
 }
-function chooseparts4() {
-    let textdata = document.querySelector("div.container_block4")
+function bioidendifity_EBS_toggle() {
+    let textdata = document.querySelectorAll("div.container_blockEBS")
+    textdata.forEach((textdata) => {
+        textdata.classList.toggle("visible_element")
+
+    })
+    textdata.forEach((textdata) => {
+        textdata.classList.toggle("hidenseek_element")
+    })
+}
+function bioidendifity_VLLuna_toggle() {
+    let textdata = document.querySelector("div.container_blockVLLuna")
         textdata.classList.toggle("visible_element")
         textdata.classList.toggle("hidenseek_element")
 }
-function chooseparts5() {
-    let textdata = document.querySelector("div.container_block5")
+function personal_data_consent_toggle() {
+    let textdata = document.querySelector("div.container_personal_data_consent")
         textdata.classList.toggle("visible_element")
         textdata.classList.toggle("hidenseek_element")
 }
-function chooseparts6() {
-    let textdata = document.querySelector("div.container_block6")
+function standart_block_toggle() {
+    let textdata = document.querySelectorAll("div.container_standart_block")
+    textdata.forEach((textdata) => {
+        textdata.classList.toggle("visible_element")
+    })
+    textdata.forEach((textdata) => {
+        textdata.classList.toggle("hidenseek_element")
+    })
+}
+function integration_typeMoodle_toggle() {
+    let textdata = document.querySelector("div.container_block_generation")
         textdata.classList.toggle("visible_element")
         textdata.classList.toggle("hidenseek_element")
 }
-function chooseparts7() {
-    let textdata = document.querySelector("div.container_block7")
-        textdata.classList.toggle("visible_element")
-        textdata.classList.toggle("hidenseek_element")
+function integration_typeAPI_toggle() {
+    let textdata = document.querySelector("div.container_block_generation")
+        textdata.classList.add("hidenseek_element")
 }
-function chooseparts8() {
-    let textdata = document.querySelector("div.container_block8")
-        textdata.classList.toggle("visible_element")
-        textdata.classList.toggle("hidenseek_element")
-}
-function chooseparts9() {
-    let textdata = document.querySelector("div.container_block9")
-        textdata.classList.toggle("visible_element")
-        textdata.classList.toggle("hidenseek_element")
-}
-function chooseparts10() {
-    let textdata = document.querySelector("div.container_block10")
-        textdata.classList.toggle("visible_element")
-        textdata.classList.toggle("hidenseek_element")
+function integration_typeURLgeneration_toggle() {
+    let textdata = document.querySelector("div.container_block_generation")
+        textdata.classList.add("hidenseek_element")
 }

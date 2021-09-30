@@ -14,34 +14,38 @@
 </head>
 <body>
     <div class="container">
-
         <div class="checkboxes_block" >
-            <input type="checkbox" name="" id="check_part1" onclick=chooseparts1()>
-            <p class="checkboxes_namefield" id="checkbox1">Part_1</p>
-            <input type="checkbox" name="" id="check_part2" onclick=chooseparts2()>
-            <p class="checkboxes_namefield" id="checkbox2">Part_2</p>
-            <input type="checkbox" name="" id="check_part3" onclick=chooseparts3()>
-            <p class="checkboxes_namefield" id="checkbox3">Part_3</p>
-            <input type="checkbox" name="" id="check_part4" onclick=chooseparts4()>
-            <p class="checkboxes_namefield" id="checkbox4">Part_4</p>
-            <input type="checkbox" name="" id="check_part5" onclick=chooseparts5()>
-            <p class="checkboxes_namefield" id="checkbox5">Part_5</p>
-            <input type="checkbox" name="" id="check_part6" onclick=chooseparts6()>
-            <p class="checkboxes_namefield" id="checkbox6">Part_6</p>
-            <input type="checkbox" name="" id="check_part7" onclick=chooseparts7()>
-            <p class="checkboxes_namefield" id="checkbox7">Part_7</p>
-            <input type="checkbox" name="" id="check_part8" onclick=chooseparts8()> 
-            <p class="checkboxes_namefield" id="checkbox8">Part_8</p>
-            <input type="checkbox" name="" id="check_part9" onclick=chooseparts9()>
-            <p class="checkboxes_namefield" id="checkbox9">Part_9</p>
-            <input type="checkbox" name="" id="check_part10"onclick=chooseparts10()>
-            <p class="checkboxes_namefield" id="checkbox10">Part_10</p>
+            <input type="checkbox" name="" id="check_part1" onclick=syncblock_toggle()>
+            <p class="checkboxes_namefield" id="checkbox1">Синхронный</p>
+            <input type="checkbox" name="" id="check_part2" onclick=asyncblock_toggle()>
+            <p class="checkboxes_namefield" id="checkbox2">Асинхронный</p>
+            <input type="checkbox" name="" id="check_part3" onclick=twice_camera_toggle()>
+            <p class="checkboxes_namefield" id="checkbox3">Вторая камера</p>
+            <input type="checkbox" name="" id="check_part4" onclick=slot_entry_toggle()>
+            <p class="checkboxes_namefield" id="checkbox4">Запись в слот</p>
+            <input type="checkbox" name="" id="check_part5" onclick=bioidendifity_Examus_toggle()>
+            <p class="checkboxes_namefield" id="checkbox5">Биоидентификация Examus</p>
+            <input type="checkbox" name="" id="check_part6" onclick=bioidendifity_EBS_toggle()>
+            <p class="checkboxes_namefield" id="checkbox6">Биоидентификация EBS</p>
+            <input type="checkbox" name="" id="check_part7" onclick=bioidendifity_VLLuna_toggle()>
+            <p class="checkboxes_namefield" id="checkbox7">Биоидентификация VLLuna</p>
+            <input type="checkbox" name="" id="check_part8" onclick=personal_data_consent_toggle()> 
+            <p class="checkboxes_namefield" id="checkbox8">Согласие на обработку персональных данных</p>
+            <input type="checkbox" name="" id="check_part9" onclick=integration_typeMoodle_toggle()> 
+            <p class="checkboxes_namefield" id="checkbox9">Тип интеграции Moodle</p>
+            <input type="checkbox" name="" id="check_part10" onclick=integration_typeAPI_toggle()> 
+            <p class="checkboxes_namefield" id="checkbox10">Тип интеграции API</p>
+            <input type="checkbox" name="" id="check_part11" onclick=integration_typeURLgeneration_toggle()> 
+            <p class="checkboxes_namefield" id="checkbox11">Тип интеграции создание ссылок</p>
+            <input type="checkbox" name="" id="check_part12" onclick=standart_block_toggle()> 
+            <p class="checkboxes_namefield" id="checkbox12">Тестовый чекбокс для проверки функций</p>
+
         </div>
         <div class="btn">
             <button type="submit" name="submit" onclick=downloadPDF()>Submit</button>
         </div>
         <div class="container_text">
-            <div class="container_block hidenseek_element container_block1">
+            <div class="container_block hidenseek_element container_async">
                 <h1>EXAMUS</h1>
                 <h2>ИНСТРУКЦИЯ ДЛЯ ПОЛЬЗОВАТЕЛЕЙ</h2>
                 <h4>АСИНХРОННЫЙ ПРОКТОРИНГ</h4>
@@ -140,7 +144,7 @@
                         </li>
                     </ul>
             </div>
-            <div class="container_block hidenseek_element container_block2">
+            <div class="container_block hidenseek_element container_sync">
                 <h1>EXAMUS</h1>
                 <h2>ИНСТРУКЦИЯ ДЛЯ ПОЛЬЗОВАТЕЛЕЙ</h2>
                 <h4>СИНХРОННЫЙ ПРОКТОРИНГ</h4>
@@ -239,7 +243,7 @@
                         </li>
                     </ul>
             </div>
-            <div class="container_block hidenseek_element container_block3">
+            <div class="container_block hidenseek_element container_standart_block">
                 <h2>РАБОТА С EXAMUS</h2>
                 <h3>Подготовка рабочего места</h3>
                 <h4>ПЕРЕД ЭКЗАМЕНОМ НЕОБХОДИМО ПРОВЕСТИ СЛЕДУЮЩИЕ ШАГИ:</h4>
@@ -256,7 +260,7 @@
                      Отключите дублирующие мониторы, мышки, клавиатуры (если есть)
                 
             </div>
-            <div class="container_block hidenseek_element container_block4">
+            <div class="container_block hidenseek_element container_sync container_slot_entry">
 				<h2>ЗАПИСЬ НА ЭКЗАМЕН(УНИКАЛЬНАЯ СТРАНИЦА СИНХРОННЫЙ)</h2>
 
 				В случае, если Вы ещё не записаны на экзамен, то сперва необходимо произвести запись в Календаре на свободный слот согласно данному разделу.
@@ -270,10 +274,6 @@
 					<li>После успешной записи слот станет оранжевым.
 					</li>
 				</ul>
-				 
-				
-				 
-				 
 				<h4>ОТМЕНА ЗАПИСИ</h4>
 				
 				<li>
@@ -283,7 +283,7 @@
 				<h4>Отмена записи доступна не позднее, чем за 24 часа до начала экзамена.</h4>
 				
             </div>
-            <div class="container_block hidenseek_element container_block5">
+            <div class="container_block hidenseek_element container_async">
 				<h2>НАЧАЛО ЭКЗАМЕНА (ВЗАИМОСВЯЗАННАЯ СТРАНИЦА АСИНХРОННЫЙ)</h2>
 				<ul>
 					<li>Выберите нужный экзамен и нажмите на кнопку <b>«Приступить»</b></li>
@@ -291,7 +291,7 @@
 					<hr noshade size="0.5px">
 					<h3>Обратите внимание, кнопка «Приступить» доступна за 15 минут до начала тестирования, но сам экзамен доступен ровно в назначенное время.</h3>
 					<hr noshade size="0.5px"> 
-					<li>Прочтите порядок прохождения и подтвердите своё согласие. На почту придёт согласие на обработку персональных данных, необходимое для прохождения прокторинга.</li>
+					<div class="container_small_block personal_data_consent"><li>Прочтите порядок прохождения и подтвердите своё согласие. На почту придёт согласие на обработку персональных данных, необходимое для прохождения прокторинга.</li></div>
 				</ul>
 				 
 				 
@@ -299,20 +299,20 @@
 				<h4>При возникновении проблем с началом экзамена см. раздел Проблемы с началом экзамена.</h4>
 				 
 			</div>
-            <div class="container_block hidenseek_element container_block6">
+            <div class="container_block hidenseek_element container_sync">
 				<h2>НАЧАЛО ЭКЗАМЕНА(ВЗАИМОСВЯЗАННАЯ СТРАНИЦА СИНХРОННЫЙ)</h2>
 				<ul>
-					<li>Карточка с названием экзамена появится за 15 минут до начала теста. Нажмите на кнопку «Приступить».</li>
+					<div class="container_block_generation"><li>Карточка с названием экзамена появится за 15 минут до начала теста. Нажмите на кнопку «Приступить».</li></div>
 					<br>
 					<hr noshade size="0.5px">
 					<h3>Обратите внимание, что войти на экзамен можно в течение 30-и минут после начала слота. Если 30 минут с начала экзамена уже прошло, то попасть на экзамен будет невозможно. </h3>
 					<hr noshade size="0.5px"> 
-					<div class="container_small_block"><li>Прочтите порядок прохождения и подтвердите своё согласие. На почту придёт согласие на обработку персональных данных, необходимое для прохождения прокторинга.</li>
+					<div class="container_small_block container_personal_data_consent"><li>Прочтите порядок прохождения и подтвердите своё согласие. На почту придёт согласие на обработку персональных данных, необходимое для прохождения прокторинга.</li>
 					</div>
 					<h4>При возникновении проблем с началом экзамена см. раздел Проблемы с началом экзамена.</h4>
 				</ul>
 			</div>
-            <div class="container_block hidenseek_element container_block7">
+            <div class="container_block hidenseek_element container_standart_block">
 				<h2>ПРОВЕРКА ОБОРУДОВАНИЯ</h2>
 				<h4>Следующим этапом будет проверка оборудования перед экзаменом.</h4>
 				<ul>
@@ -322,7 +322,7 @@
 				</ul>
 				<h4>При возникновении проблем с проверкой оборудования см раздел. Проблемы при проверке оборудования.</h4>
 			</div>
-            <div class="container_block hidenseek_element container_block8">
+            <div class="container_block hidenseek_element container_camera">
 				<h2>ПОДКЛЮЧЕНИЕ ВТОРОЙ КАМЕРЫ(УНИКАЛЬНАЯ СТРАНИЦА)</h2>
 				<ul>
 					<li>Отсканируйте код с помощью камеры на мобильном устройстве, либо скопируйте ссылку и пройдите по ней:</li>
@@ -334,14 +334,14 @@
 				
 				
 			</div>
-            <div class="container_block hidenseek_element container_block9">
+            <div class="container_block hidenseek_element container_blockExamus">
 				<h2>БИОИДЕНТИФИКАЦИЯ EXAMUS</h2>
 				<ul>
 					<li>Подтвердите свою личность с помощью системы биометрической идентификации. Необходимо нажать «Подтвердить личность». </li>
 					<li>Сделайте фото лица, поместив его в указанный овал. </li>
 				</ul>
 			</div>
-            <div class="container_block hidenseek_element container_block10">
+            <div class="container_block hidenseek_element container_blockEBS">
 				<h2>БИОИДЕНТИФИКАЦИЯ EBS, Страница 1 из 2</h2>
 				<ul>
 					<li>Подтвердите свою личность с помощью системы биометрической идентификации. Нажмите «Подтвердить личность».</li>
@@ -349,7 +349,7 @@
 					<li>Ознакомьтесь с условиями подтверждения личности и нажмите кнопку: «Все понятно. Можем начинать».</li>
 				</ul>
 			</div>
-			<div class="container_block hidenseek_element container_block11">
+			<div class="container_block hidenseek_element container_blockEBS">
 				<h2>БИОИДЕНТИФИКАЦИЯ EBS, Страница 2 из 2</h2>
 				<ul>
 					<li>Отправьте фотографию и проговорите вслух числа в микрофон. </li>
@@ -359,7 +359,7 @@
 					<li>Дождитесь ответа от системы. В случае положительного результата ожидайте перехода на следующую страницу, в случае отрицательного результата – повторите попытку биометрической идентификации. </li>
 				</ul>
 			</div>
-			<div class="container_block hidenseek_element container_block12">
+			<div class="container_block hidenseek_element container_blockVLLuna">
                 <h2>БИОИДЕНТИФИКАЦИЯ VL LUNA</h2>
                 <ul>
                     <li>Подтвердите свою личность с помощью системы биометрической идентификации. Нажмите «Подтвердить личность».
@@ -368,14 +368,14 @@
                     </li>
                 </ul>
 			</div>
-            <div class="container_block hidenseek_element container_block13">
+            <div class="container_block hidenseek_element container_standart_block">
                 <h2>ИДЕНТИФИКАЦИЯ ЛИЧНОСТИ</h2>
                 <ul>
                     <li>Сделайте фотографию по запросу на экране и нажмите кнопку «Сфотографировать»</li>
                     <li>После обновления страницы кнопку «Отправить»</li>
                 </ul>
             </div>
-            <div class="container_block hidenseek_element container_block14">
+            <div class="container_block hidenseek_element container_standart_block">
                 <h2>ПРОХОЖДЕНИЕ ТЕСТИРОВАНИЯ</h2>
                 <ul>
                     <li>Над лентой чата отображены правила экзамена. Серым цветом обозначены запрещённые опции, зелёным — разрешённые. Наведите мышь на иконку с правилом, чтобы увидеть описание.</li>
@@ -385,21 +385,21 @@
                     <li>Обязательно обращайте внимание на таймер, отображающий время, оставшееся до конца экзамена:</li>
                 </ul>
             </div>
-            <div class="container_block hidenseek_element container_block15">
+            <div class="container_block hidenseek_element container_sync">
                 <h2>ПРОХОЖДЕНИЕ ТЕСТИРОВАНИЯ  (УНИКАЛЬНАЯ СТРАНИЦА СИНХРОННЫЙ)</h2>
                 <ul>
                     <li>С помощью чата в правой части экрана Вы можете общаться с проктором на протяжении всего экзамена.</li>
                     <li>В случае совершения вами запрещенных действий, проктор отправит предупреждение, которое будет отображено в чате, а также появится во всплывающем сообщении в нижнем правом углу экрана:</li>
                 </ul>
             </div>
-            <div class="container_block hidenseek_element container_block16">
+            <div class="container_block hidenseek_element container_standart_block">
                 <h2>ЗАВЕРШЕНИЕ РАБОТЫ</h2>
                 <ul>
                     <li>Если вы уверены в своих ответах и готовы отправить их на проверку, нажмите кнопку «Закончить попытку»</li>
                     <li>Закройте Examus</li>
                 </ul>
             </div>
-            <div class="container_block hidenseek_element container_block17">
+            <div class="container_block hidenseek_element container_standart_block">
                 <h2>ПРОБЛЕМЫ ПРИ ПРОВЕРКЕ ОБОРУДОВАНИЯ</h2>
                 <h4> Проверка оборудования включает в себя четыре пункта:</h4>
                 <ul>
@@ -418,11 +418,11 @@
                 <h4>Возможные варианты: микрофон не подключен в браузере, микрофон не подключен на компьютере, микрофон отсутствует на компьютере или работает неисправно.</h4>
                 <h4>1.	Проверить, что микрофоне не заблокирован в браузере:</h4>
              </div>
-            <div class="container_block hidenseek_element container_block18">
+            <div class="container_block hidenseek_element container_standart_block">
                 <h4>2.	Дать доступ микрофону, если он заблокирован:</h4>
                 <h4>3.	Проверить, что нужный микрофон выбран в браузере. Для Chrome это путь: chrome://settings/content/microphone</h4>
             </div>
-            <div class="container_block hidenseek_element container_block19">
+            <div class="container_block hidenseek_element container_standart_block">
                 <ul>
                     <li>4.	Проверить, что нужный микрофон выбран в компьютере и работает по умолчанию. Также нужно обращать внимание на то, чтобы возле микрофона горел зелёный индикатор, который показывает уровень громкости микрофона. Если индикатор есть, значит, микрофон работает.</li>
                     <li>5.	Также работу микрофона могут блокировать антивирусы, например, McAfee, Kaspersky, Avast! И  т.д. Для корректной работы требуется отключить все антивирусы и брандмауэры, а также отключить расширения, такие AdBlock и подобные им блокировщики.
@@ -437,7 +437,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="container_block hidenseek_element container_block20">
+            <div class="container_block hidenseek_element container_standart_block">
                 <hr noshade size="0.5px">
                 <h3>Не слышно звука из Вашего микрофона</h3>
                 <hr noshade size="0.5px"> 
@@ -457,13 +457,13 @@
                 </ul>
 
             </div>
-            <div class="container_block hidenseek_element container_block21">
+            <div class="container_block hidenseek_element container_standart_block">
                 <ul>
                     <li>2.4.Если микрофонов нет, то нажмите в пустой области и выберите "Показать отключенные устройства". Нажмите на нужный микрофон правой кнопкой мыши выберите, «Включить»:</li>
                     <li>2.5.Далее нажмите на микрофон правой кнопкой мыши, выберите "Свойства", перейдите на вкладку «Прослушать» и отметьте следующие пункты и нажмите «Применить»:</li>
                 </ul>
             </div>
-            <div class="container_block hidenseek_element container_block22">
+            <div class="container_block hidenseek_element container_standart_block">
                 <ul>
                     <li>2.6.Перейдите на вкладку «Уровни», проверьте уровень громкости микрофона. Если у индикатора громкости стоит значок зачеркивания — уберите его. Подтвердите изменения, нажав кнопку ОК:
                     </li>
@@ -471,7 +471,7 @@
                     </li>
                 </ul>
             </div>
-            <div class="container_block hidenseek_element container_block23">
+            <div class="container_block hidenseek_element container_standart_block">
                 <hr noshade size="0.5px">
                 <h3>Не найдена веб-камера</h3>
                 <hr noshade size="0.5px"> 
@@ -480,13 +480,13 @@
                     <li>1.Проверить, что камера не заблокированa в браузере.</li>
                 </ul>
             </div>
-            <div class="container_block hidenseek_element container_block24">
+            <div class="container_block hidenseek_element container_standart_block">
                     <ul>
                         <li>2.Дать доступ к камере, если она заблокирована:</li>
                         <li>3.Проверить, что нужный микрофон выбран в браузере. Для Chrome это путь: chrome://settings/content/camera</li>
                     </ul>
             </div>
-            <div class="container_block hidenseek_element container_block25">
+            <div class="container_block hidenseek_element container_standart_block">
                 <ul>
                     <li>4.Проверить, что нужная камера выбрана в компьютере и работает по умолчанию. Проверить это можно также в Диспетчере устройств в разделе Камера. </li>
                     <h4>Также необходимо проверить, что камера работает. Используйте для проверки приложение онлайн-ресурс https://webcammictest.com/ru</h4>
@@ -500,7 +500,7 @@
                     <li>6.	Отключите все антивирусы, а также расширения, вкладки и программы, использующие веб-камеру. Сторонние браузеры и программы, использующие камеру могут мешать прохождению проверки оборудования по пункту веб-камера.</li>
                 </ul>
             </div>
-            <div class="container_block hidenseek_element container_block26">
+            <div class="container_block hidenseek_element container_standart_block">
                 <hr noshade size="0.5px">
                 <h3>Не поступает изображение с веб-камеры</h3>
                 <hr noshade size="0.5px"> 
@@ -512,7 +512,7 @@
                     <li>4.Отключить антивирусы.</li>
                 </ul>
             </div>
-            <div class="container_block hidenseek_element container_block27">
+            <div class="container_block hidenseek_element container_standart_block">
                 <hr noshade size="0.5px">
                 <h3>Недостаточная скорость интернет-соединения</h3>
                 <hr noshade size="0.5px"> 
@@ -526,7 +526,7 @@
                     <li>6.	Попросить отключиться других пользователей от сети.</li>
                 </ul>
             </div>
-            <div class="container_block hidenseek_element container_block28">
+            <div class="container_block hidenseek_element container_standart_block">
                 <hr noshade size="0.5px">
                 <h3>Веб-камера и рабочий стол</h3>
                 <hr noshade size="0.5px"> 
@@ -562,7 +562,7 @@
                     <li>Брандмауэр и безопасность сети: попробуйте отключить защиту для: Частная сеть, Сеть домена, Общедоступная сеть, Windows Defender - Отключите всё.</li>
                 </ul>
             </div>
-            <div class="container_block hidenseek_element container_block29">
+            <div class="container_block hidenseek_element container_standart_block">
                 <ul>
                     <li>7.При проверке оборудования убедиться, что доступ к экрану разрешается. Для при запросе поделиться экраном нужно выбрать экран и нажать Поделиться.</li>
                     <li>8.Попробовать сменить браузер.</li>
@@ -570,7 +570,7 @@
                 </ul>
                 <h4>Вы также можете ознакомиться со статьями на нашем портале в Базе знаний: https://help.examus.net/ru-RU/support/home</h4>
             </div>
-            <div class="container_block hidenseek_element container_block30">
+            <div class="container_block hidenseek_element container_standart_block">
                 <h2>ПРОБЛЕМЫ С НАЧАЛОМ ЭКЗАМЕНА</h2>
                 <hr noshade size="0.5px">
                 <h3>1.	При вводе логина и пароля страница обновляется, дальше невозможно зайти.</h3>
@@ -578,11 +578,11 @@
                 <h4>Причина поведения – запрет на приём Cookie в браузере. Для её решения требуется разрешить приём Cookie в браузере:</h4>
                 <h4>a)	Кликнуть на значок Cookie в правом верхнем углу и выбрать “Разрешать на этом сайте”</h4>
             </div>
-            <div class="container_block hidenseek_element container_block31">
+            <div class="container_block hidenseek_element container_standart_block">
                 <h4>b)	Перейти в раздел chrome://settings/cookies и выбрать “Всегда разрешать все Cookie”</h4>
                 <h4>c)	Если Вы входите в режиме Инкогнито, необходимо убрать галочку с “Блокировать сторонние файлы Cookie” или использовать обычный режим браузера.</h4>
             </div>
-            <div class="container_block hidenseek_element container_block32">
+            <div class="container_block hidenseek_element container_standart_block">
                 <hr noshade size="0.5px">
                 <h3>2.	Артефакты в браузере. Панель экзамена смещена. Смещается интерфейс.</h3>
                 <hr noshade size="0.5px"> 
@@ -594,7 +594,7 @@
                 <h4>Если Вы видите эту надпись в самом начале экзамена, пожалуйста, используйте ссылку, предоставленную организатором обучения. Не используйте расширение Examus для браузера!</h4>
                 <h4>Если Вы заходите по ссылке, но всё равно видите эту надпись, пожалуйста, напишите нам.</h4>
             </div>
-            <div class="container_block hidenseek_element container_block33">
+            <div class="container_block hidenseek_element container_standart_block">
                 <hr noshade size="0.5px">
                 <h3>4.	Зависла страница с надписью Страница не отвечает</h3>
                 <hr noshade size="0.5px">
@@ -609,7 +609,7 @@
                 <hr noshade size="0.5px"> 
                 <h4>Причины: неполадки с нестабильной скоростью или качеством в интернет-соединении. Необходимо отключать все сторонние программы или приложения, нагружающие сетевой канал, перезагрузить маршрутизатор, попросить всех, кто подключен к сети временно отключиться для снижения нагрузки на сетевой канал.</h4>
             </div>
-            <div class="container_block hidenseek_element container_block34">
+            <div class="container_block hidenseek_element container_standart_block">
                 <hr noshade size="0.5px">
                 <h3>Нет доступного экзамена.</h3>
                 <hr noshade size="0.5px">
@@ -620,7 +620,7 @@
                 <h5>d.	Уточните у организатора обучения , что Вы записаны на курс. </h5>
                 <h6><i>Организатор обучения – Ваш вуз или организатор проведения экзаменационного мероприятия. Служба прокторинга Экзамус не является организатором тестирования.</i></h6>
             </div>
-            <div class="container_block hidenseek_element container_block35">
+            <div class="container_block hidenseek_element container_standart_block">
                 <h2>СЛУЖБА ТЕХНИЧЕСКОЙ ПОДДЕРЖКИ EXAMUS</h2>
                 <h4>В случае возникновения проблем напишите нам на почту support@examus.net или попробуйте найти решение на Портале технической поддержки: https://help.examus.net/ru-RU/support/home</h4>
                 <h4>Также наш Telegram-Бот готов помочь Вам в решении проблемы: @ExamusBot</h4>
