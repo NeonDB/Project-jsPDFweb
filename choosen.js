@@ -111,11 +111,12 @@ function integration_typeURLgeneration_toggle() {
         let syncchbx = document.getElementById("check_part11")
         if (syncchbx.checked==true) document.getElementById('check_part9').disabled = true,
         document.getElementById('check_part10').disabled = true,
-        document.getElementById('check_part4').disabled = true
+        document.getElementById('check_part4').disabled = true,
+        document.getElementById('check_part5').disabled = true
         else document.getElementById('check_part9').disabled = false,
         document.getElementById('check_part10').disabled = false,
-        document.getElementById('check_part4').disabled = false;
-
+        document.getElementById('check_part4').disabled = false,
+        document.getElementById('check_part5').disabled = false;
 }
 function faq_block_toggle() {
     let textdata = document.querySelectorAll("div.container_faq_block")
@@ -125,4 +126,77 @@ function faq_block_toggle() {
     textdata.forEach((textdata) => {
         textdata.classList.toggle("hidenseek_element")
     })
+}
+
+function open_modalonclick() { 
+    let open_modal = document.querySelectorAll('.open_modal');
+    let close_modal = document.getElementById('close_modal');
+    let modal = document.getElementById('modal');
+    let body = document.getElementsByTagName('body')[0];
+    for (let i = 0; i < open_modal.length; i++) {
+    // клик на открытие
+            modal.classList.add('modal_vis'); // добавляем видимость окна
+            body.classList.add('body_block'); // убираем прокрутку
+        
+    }
+};
+function open2dialog() {
+    let wmodal1 = document.getElementById("modal_txt1");
+    wmodal1.classList.toggle("visible_element")
+    wmodal1.classList.toggle("hidenseek_element")
+    let wmodal2 = document.getElementById("modal_txt2");
+    wmodal2.classList.toggle("visible_element")
+    wmodal2.classList.toggle("hidenseek_element")
+}
+function open3dialog() {
+    let wmodal2 = document.getElementById("modal_txt2");
+    wmodal2.classList.toggle("visible_element")
+    wmodal2.classList.toggle("hidenseek_element")
+    let wmodal3 = document.getElementById("modal_txt3");
+    wmodal3.classList.toggle("visible_element")
+    wmodal3.classList.toggle("hidenseek_element")
+}
+function open4dialog() {
+    let wmodal3 = document.getElementById("modal_txt3");
+    wmodal3.classList.toggle("visible_element")
+    wmodal3.classList.toggle("hidenseek_element")
+    let wmodal4 = document.getElementById("modal_txt4");
+    wmodal4.classList.toggle("visible_element")
+    wmodal4.classList.toggle("hidenseek_element")
+}
+function open5dialog() {
+    let wmodal4 = document.getElementById("modal_txt4");
+    wmodal4.classList.toggle("visible_element")
+    wmodal4.classList.toggle("hidenseek_element")
+    let wmodal5 = document.getElementById("modal_txt5");
+    wmodal5.classList.toggle("visible_element")
+    wmodal5.classList.toggle("hidenseek_element")
+}
+function open6dialog() {
+    let wmodal5 = document.getElementById("modal_txt5");
+    wmodal5.classList.toggle("visible_element")
+    wmodal5.classList.toggle("hidenseek_element")
+    let wmodal6 = document.getElementById("modal_txt6");
+    wmodal6.classList.toggle("visible_element")
+    wmodal6.classList.toggle("hidenseek_element")
+}
+function open7dialog() {
+    let wmodal6 = document.getElementById("modal_txt6");
+    wmodal6.classList.toggle("visible_element")
+    wmodal6.classList.toggle("hidenseek_element")
+    let wmodal7 = document.getElementById("modal_txt7");
+    wmodal7.classList.toggle("visible_element")
+    wmodal7.classList.toggle("hidenseek_element")
+}
+function open1dialog() {
+    let wmodal7 = document.getElementById("modal_txt7");
+    wmodal7.classList.toggle("visible_element")
+    wmodal7.classList.toggle("hidenseek_element")
+    let wmodal1 = document.getElementById("modal_txt1");
+    wmodal1.classList.toggle("visible_element")
+    wmodal1.classList.toggle("hidenseek_element")
+}
+function closeddialog() {
+    let modal = document.getElementById("modal");
+    modal.classList.remove("modal_vis")
 }
