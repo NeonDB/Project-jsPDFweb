@@ -32,3 +32,39 @@ hr {
 .container_text {
     max-width: 180px;
 }
+.image {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    max-width: 40px;
+    max-height: 40px;
+}
+.image_xl {
+    max-width: 120px;
+    max-height: 120px;
+}
+.image_l {
+    max-width: 100px;
+    max-height: 100px;
+}
+.image_m {
+    max-width: 80px;
+    max-height: 80px;
+}
+.image_logo {
+    max-width: 20px;
+    max-height: 20px;
+
+}
+.image_box {
+    display: flex;
+    flex-flow: column wrap ;
+    justify-content: center;
+    align-items: center;
+}
+.title_box {
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
