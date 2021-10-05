@@ -130,9 +130,11 @@ function faq_block_toggle() {
 
 function open_modalonclick() { 
     let open_modal = document.querySelectorAll('.open_modal');
-    let close_modal = document.getElementById('close_modal');
     let modal = document.getElementById('modal');
     let body = document.getElementsByTagName('body')[0];
+    let instruction_text = document.querySelector('.container_text')
+    instruction_text.classList.toggle('hidenseek_element')
+    instruction_text.classList.toggle('visible_element')
     for (let i = 0; i < open_modal.length; i++) {
     // клик на открытие
             modal.classList.add('modal_vis'); // добавляем видимость окна
@@ -199,4 +201,7 @@ function open1dialog() {
 function closeddialog() {
     let modal = document.getElementById("modal");
     modal.classList.remove("modal_vis")
+    let instruction_text = document.querySelector('.container_text')
+    instruction_text.classList.toggle('hidenseek_element')
+    instruction_text.classList.toggle('visible_element')
 }

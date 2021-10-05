@@ -1,14 +1,114 @@
+@font-face {
+    font-family: 'fonta78cfad3beb089a6ce86d4e280fa270b';
+        
+        src:    url('https://nomail.com.ua/files/eot/a78cfad3beb089a6ce86d4e280fa270b.eot?#iefix') format('embedded-opentype'),
+                url('https://nomail.com.ua/files/woff/a78cfad3beb089a6ce86d4e280fa270b.woff') format('woff'),
+                url('https://nomail.com.ua/files/woff2/a78cfad3beb089a6ce86d4e280fa270b.woff2') format('woff2');
+}
+@font-face { font-family: 'Calibri';  src: local('Calibri'), url('https://nomail.com.ua/files/woff/a78cfad3beb089a6ce86d4e280fa270b.woff') format('woff'); }
+@font-face {
+    font-family: 'fontc8980f67879f6f08737d47c2ecb1cc43';
+        
+        src:    url('https://nomail.com.ua/files/eot/c8980f67879f6f08737d47c2ecb1cc43.eot?#iefix') format('embedded-opentype'),
+                url('https://nomail.com.ua/files/woff/c8980f67879f6f08737d47c2ecb1cc43.woff') format('woff'),
+                url('https://nomail.com.ua/files/woff2/c8980f67879f6f08737d47c2ecb1cc43.woff2') format('woff2');
+    }
+    
+@font-face { font-family: 'Calibri-Bold';  src: local('Calibri-Bold'), url('https://nomail.com.ua/files/woff/c8980f67879f6f08737d47c2ecb1cc43.woff') format('woff'); }
+@font-face {
+    font-family: 'font3e14931180b08416dd7c967a7163f8ea';
+        
+        src:    url('https://nomail.com.ua/files/eot/3e14931180b08416dd7c967a7163f8ea.eot?#iefix') format('embedded-opentype'),
+                url('https://nomail.com.ua/files/woff/3e14931180b08416dd7c967a7163f8ea.woff') format('woff'),
+                url('https://nomail.com.ua/files/woff2/3e14931180b08416dd7c967a7163f8ea.woff2') format('woff2');
+    }
+    
+@font-face { font-family: 'Calibri-Italic';  src: local('Calibri-Italic'), url('https://nomail.com.ua/files/woff/3e14931180b08416dd7c967a7163f8ea.woff') format('woff'); }
+@font-face {
+    font-family: 'font8ff6c498c08ffb65ca6b586c0e5dbe7f';
+        
+        src:    url('https://nomail.com.ua/files/eot/8ff6c498c08ffb65ca6b586c0e5dbe7f.eot?#iefix') format('embedded-opentype'),
+                url('https://nomail.com.ua/files/woff/8ff6c498c08ffb65ca6b586c0e5dbe7f.woff') format('woff'),
+                url('https://nomail.com.ua/files/woff2/8ff6c498c08ffb65ca6b586c0e5dbe7f.woff2') format('woff2');
+    }
+    
+    @font-face { font-family: 'Calibri-Light';  src: local('Calibri-Light'), url('https://nomail.com.ua/files/woff/8ff6c498c08ffb65ca6b586c0e5dbe7f.woff') format('woff'); }
+@font-face {
+    font-family: 'font3567d339a4859211316d2894f44ee97e';
+        
+        src:    url('https://nomail.com.ua/files/eot/3567d339a4859211316d2894f44ee97e.eot?#iefix') format('embedded-opentype'),
+                url('https://nomail.com.ua/files/woff/3567d339a4859211316d2894f44ee97e.woff') format('woff'),
+                url('https://nomail.com.ua/files/woff2/3567d339a4859211316d2894f44ee97e.woff2') format('woff2');
+    }
+
+@font-face { font-family: 'Calibri-LightItalic';  src: local('Calibri-LightItalic'), url('https://nomail.com.ua/files/woff/3567d339a4859211316d2894f44ee97e.woff') format('woff'); }
+@font-face {
+    font-family: 'font4b688ffc60e79cbd3bba465966a58e73';
+        
+        src:    url('https://nomail.com.ua/files/eot/4b688ffc60e79cbd3bba465966a58e73.eot?#iefix') format('embedded-opentype'),
+                url('https://nomail.com.ua/files/woff/4b688ffc60e79cbd3bba465966a58e73.woff') format('woff'),
+                url('https://nomail.com.ua/files/woff2/4b688ffc60e79cbd3bba465966a58e73.woff2') format('woff2');
+    }
+    
+@font-face { font-family: 'Calibri-BoldItalic';  src: local('Calibri-BoldItalic'), url('https://nomail.com.ua/files/woff/4b688ffc60e79cbd3bba465966a58e73.woff') format('woff'); }
 body {
     padding: 0 40%;
-    font-family: 'PTSans', sans-serif;
-    font-size: 3px;
+    font-family: 'Calibri','Calibri-Light', 'Calibri-LightItalic', 'Calibri-Bold', 'Calibri-BoldItalic', 'Calibri-Italic';
+    font-size: 6px;
     
 }
 ul {
     list-style-position: inside;
     padding-left: 0;
+    font-family: 'Calibri-Light';
+    font-weight: 100;
+    font-size: 4px;
 }​
-
+h1 {
+    font-family: 'Calibri-Bold';
+    font-weight: 400;
+}
+h2{
+    font-family: 'Calibri-Bold';
+    line-height: 6px;
+    font-size: 6px;
+}
+h3{
+    font-family: 'Calibri-Bold';
+    font-weight: 400;
+    line-height: 4px;
+    font-size: 4px;
+}
+h4 {
+    font-family: 'Calibri-Light';
+    font-weight: 400;
+    font-size: 4px;
+}
+h5 {
+    font-family: 'Calibri-Light';
+    font-weight: 400;
+    font-size: 4px;
+}
+h6 {
+    font-family: 'Calibri-Light';
+    font-weight: 400;
+    font-size: 3px;
+}
+hr {
+    margin-bottom: -3px;
+}
+i {
+    font-family: 'Calibri-LightItalic';
+}
+a {
+    text-decoration:none;
+}
+.ul_nodots {
+    list-style-type: none;
+}
+.title_modal_windows {
+    font-size: 36px;
+}
 .container {
     margin:0 auto; 
     max-width: 640px;
@@ -28,6 +128,9 @@ ul {
     max-width: 350px;
     max-height: 120px;
 }
+.hidden_li {
+    font-size: 4px;
+}
 .checkbox_row {
     font-size: 20px;
     display: flex;
@@ -46,6 +149,7 @@ ul {
     max-width: 180px;
     min-height: 294px;
 }
+
 .container_text {
     max-width: 180px;
 }
@@ -71,6 +175,11 @@ ul {
     max-width: 20px;
     max-height: 20px;
 
+}
+.image_marker {
+    max-width: 5px;
+    max-height: 5px;
+    padding-right: 5px;
 }
 .image_box {
     display: flex;
@@ -169,4 +278,16 @@ ul {
     flex-flow: row wrap;
     justify-content: space-between;
     align-content: flex-end;
+}
+.row_block_li{
+    display: flex;
+    flex-flow: row wrap;
+    align-items:flex-start;
+    padding-bottom: 1px;
+}
+.row_block_li li{
+    list-style-type: none;
+}
+.red_string {
+    margin-left: 10px;
 }
