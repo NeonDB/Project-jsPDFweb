@@ -202,6 +202,6 @@ function closeddialog() {
     let modal = document.getElementById("modal");
     modal.classList.remove("modal_vis")
     let instruction_text = document.querySelector('.container_text')
-    instruction_text.classList.toggle('hidenseek_element')
-    instruction_text.classList.toggle('visible_element')
+    // instruction_text.classList.toggle('hidenseek_element')
+    // instruction_text.classList.toggle('visible_element')
 }
