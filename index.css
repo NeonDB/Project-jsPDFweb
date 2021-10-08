@@ -65,12 +65,9 @@ ul {
     font-size: 4px;
     padding-right: 10px;
 }​
-
-
 hr {
     margin-bottom: -3px;
 }
-
 i {
     font-family: 'Calibri-LightItalic';
 }
@@ -148,7 +145,7 @@ a {
 }
 .visible_element {
     display: block;
-    font-size: 3px;
+    font-size: 4px;
 }
 .container_block {
     max-width: 170px;
@@ -189,9 +186,8 @@ a {
 .image_bigmarker {
     max-width: 8px;
     max-height: 8px;
-    margin: 6px;
-    margin-top: 8px;
-    margin-left: 0;
+    margin: 8px 3px 0px 8px;
+
 }
 .image_box {
     display: flex;
@@ -300,6 +296,7 @@ a {
 }
 .row_block_li li{
     list-style-type: none;
+    max-width: 130px;
 }
 .red_string {
     margin-left: 10px;
@@ -338,4 +335,8 @@ h6 {
 }
 .title_padding {
     padding-top: 4px;
+}
+.image_bigmarker#support {
+    margin-top: 5px;
+    margin-right: 7px;
 }

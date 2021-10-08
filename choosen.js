@@ -142,21 +142,29 @@ function open_modalonclick() {
         
     }
 };
+
 function open2dialog() {
-    let wmodal1 = document.getElementById("modal_txt1");
-    wmodal1.classList.toggle("visible_element")
-    wmodal1.classList.toggle("hidenseek_element")
-    let wmodal2 = document.getElementById("modal_txt2");
+    let wmodal2 = document.getElementById("modal_txt1");
     wmodal2.classList.toggle("visible_element")
     wmodal2.classList.toggle("hidenseek_element")
-}
-function open3dialog() {
-    let wmodal2 = document.getElementById("modal_txt2");
-    wmodal2.classList.toggle("visible_element")
-    wmodal2.classList.toggle("hidenseek_element")
-    let wmodal3 = document.getElementById("modal_txt3");
+    let wmodal3 = document.getElementById("modal_txt2");
     wmodal3.classList.toggle("visible_element")
     wmodal3.classList.toggle("hidenseek_element")
+}
+function open3dialog() {
+    let wmodal1 = document.getElementById("modal_txt2");
+    wmodal1.classList.toggle("visible_element")
+    wmodal1.classList.toggle("hidenseek_element")
+    let URLcheckbox = document.getElementById("check_part11").checked;
+    if (URLcheckbox == true) {
+        let wmodal5 = document.getElementById("modal_txt4");
+        wmodal5.classList.toggle("visible_element")
+        wmodal5.classList.toggle("hidenseek_element")    
+    } else {
+        let wmodal2 = document.getElementById("modal_txt3");
+        wmodal2.classList.toggle("visible_element")
+        wmodal2.classList.toggle("hidenseek_element")    
+    }
 }
 function open4dialog() {
     let wmodal3 = document.getElementById("modal_txt3");
@@ -178,9 +186,16 @@ function open6dialog() {
     let wmodal5 = document.getElementById("modal_txt5");
     wmodal5.classList.toggle("visible_element")
     wmodal5.classList.toggle("hidenseek_element")
-    let wmodal6 = document.getElementById("modal_txt6");
-    wmodal6.classList.toggle("visible_element")
-    wmodal6.classList.toggle("hidenseek_element")
+    let URLcheckbox = document.getElementById("check_part11").checked;
+    if (URLcheckbox == true) {
+        let wmodal5 = document.getElementById("modal_txt7");
+        wmodal5.classList.toggle("visible_element")
+        wmodal5.classList.toggle("hidenseek_element")    
+    } else {
+        let wmodal6 = document.getElementById("modal_txt6");
+        wmodal6.classList.toggle("visible_element")
+        wmodal6.classList.toggle("hidenseek_element")
+        }
 }
 function open7dialog() {
     let wmodal6 = document.getElementById("modal_txt6");
@@ -202,6 +217,9 @@ function closeddialog() {
     let modal = document.getElementById("modal");
     modal.classList.remove("modal_vis")
     let instruction_text = document.querySelector('.container_text')
+    let body = document.getElementsByTagName('body')[0];
+    body.classList.remove('body_block');
+
     // instruction_text.classList.toggle('hidenseek_element')
     // instruction_text.classList.toggle('visible_element')
 }
