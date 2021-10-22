@@ -88,32 +88,49 @@ function integration_typeMoodle_toggle() {
     let beginbutton = document.querySelector("div.container_moodleint_block")
         beginbutton.classList.toggle("hidenseek_element")
         beginbutton.classList.toggle("visible_element")
-
+    let label = document.getElementById("cb_1")
     let syncchbx = document.getElementById("check_part9")
-        if (syncchbx.checked==true) document.getElementById('check_part10').disabled = true,
+        if (syncchbx.checked==true) 
+        label.classList.toggle("checkbox_row-active"),
+        document.getElementById('check_part10').disabled = true,
         document.getElementById('check_part11').disabled = true
-        else document.getElementById('check_part10').disabled = false,
+        else 
+        label.classList.toggle("checkbox_row-active"),
+        document.getElementById('check_part10').disabled = false,
         document.getElementById('check_part11').disabled = false;
 }
+
 function integration_typeAPI_toggle() {
     let textdata = document.querySelector("div.container_block_generation")
         textdata.classList.toggle("visible_element")
         textdata.classList.toggle("hidenseek_element")
         let syncchbx = document.getElementById("check_part10")
-        if (syncchbx.checked==true) document.getElementById('check_part9').disabled = true,
+        let label = document.getElementById("cb_2")
+
+        if (syncchbx.checked==true) 
+        label.classList.toggle("checkbox_row-active"),
+        document.getElementById('check_part9').disabled = true,
         document.getElementById('check_part11').disabled = true
-        else document.getElementById('check_part9').disabled = false,
+        else 
+        label.classList.toggle("checkbox_row-active"),
+        document.getElementById('check_part9').disabled = false,
         document.getElementById('check_part11').disabled = false;
+        
 }
 function integration_typeURLgeneration_toggle() {
     let textdata = document.querySelector("div.container_block_generation")
         textdata.classList.toggle("hidenseek_element")
         let syncchbx = document.getElementById("check_part11")
-        if (syncchbx.checked==true) document.getElementById('check_part9').disabled = true,
+        let label = document.getElementById("cb_3")
+        if (syncchbx.checked==true) 
+        label.classList.toggle("checkbox_row-active"),
+        document.getElementById('check_part9').disabled = true,
         document.getElementById('check_part10').disabled = true,
         document.getElementById('check_part4').disabled = true,
         document.getElementById('check_part5').disabled = true
-        else document.getElementById('check_part9').disabled = false,
+        else 
+        label.classList.toggle("checkbox_row-active"),
+        document.getElementById('check_part9').disabled = false,
         document.getElementById('check_part10').disabled = false,
         document.getElementById('check_part4').disabled = false,
         document.getElementById('check_part5').disabled = false;
@@ -223,3 +240,16 @@ function closeddialog() {
     // instruction_text.classList.toggle('hidenseek_element')
     // instruction_text.classList.toggle('visible_element')
 }
+// function customcheckboxtoggle() {
+//     let checkbox = document.getElementsByName('checkbox_name')
+//     let custom_check = document.getElementsByClassName("custom_checkbox")
+//     if (checkbox.checked == true) {
+//         custom_check.classList.add('.custom_checkbox-checked')
+//         custom_check.classList.remove('.custom_checkbox')
+//     }
+//     if (checkbox.checked == false) {
+//         custom_check.classList.add('.custom_checkbox')
+//         custom_check.classList.remove('.custom_checkbox-checked')
+//     }
+// }
+

@@ -77,8 +77,14 @@ a {
 .ul_nodots {
     list-style-type: none;
 }
-.title_modal_windows {
-    font-size: 36px;
+.title__main {
+    display: flex;
+    text-align: center;
+    flex-flow: column wrap;
+    font-family: "Calibri-Bold";
+    font-size: 24px;
+    max-width: 200px;
+    margin: 0 auto;
 }
 .title_marker_box {
     display: flex;
@@ -138,7 +144,12 @@ a {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
-    justify-content:flex-start;
+    justify-content: space-between;
+    box-sizing: border-box;
+    border: solid 2px rgb(37, 37, 37);
+    margin: 0.5em auto;
+    min-height: 1.5em;
+    width: 100%;
 }
 .hidenseek_element {
     display: none;
@@ -206,7 +217,7 @@ a {
 
 .modal {
     display: none;
-    background: coral;
+    background: whitesmoke;
     position: fixed;
     top: 0;
     left: 0;
@@ -226,16 +237,13 @@ a {
     transform: rotate(135deg);
 }
 .modal_txt {
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
-    background: #FFF;
+    background: whitesmoke;
     padding: 30px;
-    margin: 100px auto;
-    max-width: 800px;
-    height: 300px;
+    margin: 14% 41%;
 }
 .open_modal {
     margin: 0 auto;
-    background-color:coral ;
+    background-color: coral ;
     color: #f5f5f5;
     width: 300px;
     height: 120px;
@@ -267,11 +275,15 @@ a {
 }
 .modal_button {
     margin: 0 auto;
-    background-color:coral ;
-    color: #f5f5f5;
-    width: 100px;
+    background-color: #ffffff;
+    color: #008879;
+    width: 82px;
     height: 30px;
-    border: coral;
+    border: 1px solid#008879;
+    border-radius: 2px;
+}
+.modal_button:hover {
+    background-color: #e3f8f4;
 }
 .modal_button_submit {
     margin: 0 auto;
@@ -340,3 +352,58 @@ h6 {
     margin-top: 5px;
     margin-right: 7px;
 }
+.checkboxes_namefield {
+    margin: 0 auto;
+    font-size: 14px;
+    width: 100%;
+    text-align: center;
+    user-select: none;
+}
+.label_variable {
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.common_checkbox {
+    position: relative;
+}
+
+.custom_checkbox{
+    position: absolute;
+    background-color: black;
+    margin-left: 168px;
+    width: 1.5em;
+    height: 1.5em;
+    background-image: url('https://svg-clipart.com/svg/sign/kDyFk8m-white-plus-vector.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 10px;
+}
+.common_checkbox:checked + .custom_checkbox {
+    background-image: url("https://svg-clipart.com/svg/white/eAqRaU1-white-check-vector.svg");
+    
+}
+
+.checkbox_row-active{
+    background: black;
+    color: #f5f5f5;
+}
+.container-checkbox_button {
+    margin-top: 1em;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.container__label {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+.checkbox_button {
+    min-width: 82px;
+}
+
+/*Сделать функцию для смены класслиста псевдоэлемента*/
