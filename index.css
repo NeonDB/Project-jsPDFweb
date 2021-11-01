@@ -152,13 +152,7 @@ a {
     min-height: 1.5em;
     width: 100%;
 }
-.hidenseek_element {
-    display: none;
-}
-.visible_element {
-    display: block;
-    font-size: 4px;
-}
+
 .container_block {
     max-width: 170px;
     min-height: 294px;
@@ -229,7 +223,7 @@ a {
     flex-flow: column wrap;
 }
 .modal_vis {
-    display: block;
+    display: flex;
 }
 .body_block {
     overflow: hidden;
@@ -243,8 +237,10 @@ a {
     position: relative;
     background: whitesmoke;
     padding: 30px;
-    
-    /* margin: 20% 0 0 40%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
 }
 .open_modal {
     margin: 0 auto;
@@ -382,7 +378,7 @@ h6 {
 .custom_checkbox{
     position: absolute;
     background-color: black;
-    margin-left: 168px;
+    margin-left: 237px;
     width: 1.5em;
     height: 1.5em;
     background-image: url('https://svg-clipart.com/svg/sign/kDyFk8m-white-plus-vector.svg');
@@ -443,10 +439,28 @@ input#custom_email {
 .modal_button__download:hover {
     background-color: #e3f8f4;
 }
-
-
-@media (min-width: 767px) {
+.modal_button:disabled {
+    background-color: #FFF;
+    color: #bbc1d2;
+    border: #d8d8d8;
+}
+.hidenseek_element {
+    display: none;
+}
+.visible_element {
+    display: block;
+    font-size: 4px;
+}
+.title_contact {
+    font-family: 'Calibri-Bold';
+    line-height: 6px;
+    font-size: 6px;
+}
+.container_text:last-child{
+    max-height: 200px;
+}
+/* @media (min-width: 767px) {
     .modal_txt {        
         margin: 20% 0 0 40%;
     }
-}
+} */
