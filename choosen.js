@@ -59,14 +59,12 @@ function integration_typeURLgeneration_toggle() {
         document.getElementById('check_part9').disabled = true,
         document.getElementById('check_part10').disabled = true,
         document.getElementById('check_part4').disabled = true,
-        document.getElementById('check_part5').disabled = true,
         button_accept.removeAttribute("disabled");
         else {
         label.classList.toggle("checkbox_row-active"),
         document.getElementById('check_part9').disabled = false,
         document.getElementById('check_part10').disabled = false,
         document.getElementById('check_part4').disabled = false,
-        document.getElementById('check_part5').disabled = false,
         button_accept.setAttribute("disabled", "disabled");
         } return (integrationtype = 3);
 }
@@ -434,10 +432,6 @@ function open6dialog() {
     let wmodal6 = document.getElementById("modal_txt6");
     wmodal6.classList.toggle("visible_element")
     wmodal6.classList.toggle("hidenseek_element")
-    let URLcheckbox = document.getElementById("check_part11").checked;
-    if (URLcheckbox == true) {
-        document.getElementById("check_part5").disabled = true
-    }
 }
 function open7dialog() {
     let wmodal6 = document.getElementById("modal_txt6");
@@ -485,14 +479,9 @@ function backin2dialog() {
     let wmodal2 = document.getElementById("modal_txt2");
     wmodal2.classList.toggle("visible_element")
     wmodal2.classList.toggle("hidenseek_element")
-    let checkboxes1 = wmodal1.querySelectorAll("input[type=checkbox]")
     let checkboxes2 = wmodal2.querySelectorAll("input[type=checkbox]")
-    document.getElementById("windows-1").setAttribute("disabled", true)
     document.getElementById("windows-2").setAttribute("disabled", true)
-    let label1 = wmodal1.querySelectorAll("div.checkbox_row-active")
-    label1.forEach((label1) =>{
-        label1.classList.remove("checkbox_row-active")
-    })
+
     let label2 = wmodal2.querySelectorAll("div.checkbox_row-active")
     label2.forEach((label2) =>{
         label2.classList.remove("checkbox_row-active")
@@ -500,32 +489,8 @@ function backin2dialog() {
     checkboxes2.forEach((checkboxes2) =>{
         checkboxes2.checked = false
     })
-    checkboxes1.forEach((checkboxes1) =>{
-        checkboxes1.checked = false
-    })
-    document.getElementById('check_part11').disabled = false,
-    document.getElementById('check_part10').disabled = false,
-    document.getElementById('check_part9').disabled = false,
     document.getElementById('check_part1').disabled = false,
     document.getElementById('check_part2').disabled = false;
-    if (integrationtype == 1) {
-        let textdata1 = document.querySelector("div.container_block_generation")
-        textdata1.classList.toggle("visible_element")
-        textdata1.classList.toggle("hidenseek_element")
-        let beginbutton = document.querySelector("div.container_moodleint_block")
-        beginbutton.classList.toggle("hidenseek_element")
-        beginbutton.classList.toggle("visible_element")
-    }
-    if (integrationtype == 2) {
-        let textdata2 = document.querySelector("div.container_block_generation")
-        textdata2.classList.toggle("visible_element")
-        textdata2.classList.toggle("hidenseek_element")
-    }
-    if (integrationtype == 3) {
-        let textdata3 = document.querySelector("div.container_block_generation")
-        textdata3.classList.toggle("visible_element")
-        textdata3.classList.toggle("hidenseek_element")
-    }
     if (synctype == 1) {
         let textdata4 = document.querySelectorAll("div.container_async")
         textdata4.forEach((textdata4) => {
@@ -552,46 +517,17 @@ function backin3dialog() {
     let wmodal3 = document.getElementById("modal_txt3");
     wmodal3.classList.toggle("visible_element")
     wmodal3.classList.toggle("hidenseek_element")
-    let checkboxes2 = wmodal2.querySelectorAll("input[type=checkbox]")
     let checkboxes3 = wmodal3.querySelectorAll("input[type=checkbox]")
     let label3 = wmodal3.querySelectorAll("div.checkbox_row-active")
-    let label2 = wmodal2.querySelectorAll("div.checkbox_row-active")
-    document.getElementById("windows-2").setAttribute("disabled", true)
     document.getElementById("windows-3").setAttribute("disabled", true)
-    label2.forEach((label2) =>{
-        label2.classList.remove("checkbox_row-active")
-    })
     label3.forEach((label3) =>{
         label3.classList.remove("checkbox_row-active")
-    })
-    checkboxes2.forEach((checkboxes2) =>{
-        checkboxes2.checked = false
     })
     checkboxes3.forEach((checkboxes3) =>{
         checkboxes3.checked = false
     })
-    document.getElementById('check_part1').disabled = false,
-    document.getElementById('check_part2').disabled = false;
     document.getElementById('check_part4').disabled = false;
     document.getElementById('check_part_011').disabled = false;
-    if (synctype == 1) {
-        let textdata4 = document.querySelectorAll("div.container_async")
-        textdata4.forEach((textdata4) => {
-            textdata4.classList.toggle("visible_element")
-        })
-        textdata4.forEach((textdata4) => {
-            textdata4.classList.toggle("hidenseek_element")
-        })
-    }
-    if (synctype == 2) {
-        let textdata5 = document.querySelectorAll("div.container_sync")
-        textdata5.forEach((textdata5) => {
-            textdata5.classList.toggle("visible_element")
-        })
-        textdata5.forEach((textdata5) => {
-            textdata5.classList.toggle("hidenseek_element")
-        })
-    }
     if (entryslottype == 1) {
         let textdata6 = document.querySelectorAll("div.container_slot_entry")
         textdata6.forEach((textdata6) => {
@@ -606,38 +542,14 @@ function backin4dialog() {
     let wmodal1 = document.getElementById("modal_txt2");
     let wmodal2 = document.getElementById("modal_txt3");
     let wmodal3 = document.getElementById("modal_txt4");
-    let checkboxes2 = wmodal2.querySelectorAll("input[type=checkbox]")
     let checkboxes3 = wmodal3.querySelectorAll("input[type=checkbox]")
     let label3 = wmodal3.querySelectorAll("div.checkbox_row-active")
-    let label2 = wmodal2.querySelectorAll("div.checkbox_row-active")
     if (document.getElementById("check_part11").checked) {
         wmodal1.classList.toggle("visible_element")
         wmodal1.classList.toggle("hidenseek_element")
-        let label1 = wmodal1.querySelectorAll("div.checkbox_row-active")
-        let checkboxes1 = wmodal1.querySelectorAll("input[type=checkbox]")
-        checkboxes1.forEach((checkboxes1) =>{
-            checkboxes1.checked = false
-        })
-        label1.forEach((label1) =>{
-            label1.classList.remove("checkbox_row-active")
-        })
-        document.getElementById('check_part1').disabled = false;
-        document.getElementById('check_part2').disabled = false;
-        document.getElementById("windows-2").setAttribute("disabled", true)
-
     } else {
         wmodal2.classList.toggle("visible_element")
         wmodal2.classList.toggle("hidenseek_element")
-        label2.forEach((label2) =>{
-            label2.classList.remove("checkbox_row-active")
-        })
-        checkboxes2.forEach((checkboxes2) =>{
-            checkboxes2.checked = false
-        })
-        document.getElementById('check_part4').disabled = false;
-        document.getElementById('check_part_011').disabled = false;
-        document.getElementById("windows-3").setAttribute("disabled", true)
-
     }
     wmodal3.classList.toggle("visible_element")
     wmodal3.classList.toggle("hidenseek_element")
@@ -659,15 +571,7 @@ function backin4dialog() {
             textdata4.classList.toggle("hidenseek_element")
         })
     }
-    if (entryslottype == 1) {
-        let textdata6 = document.querySelectorAll("div.container_slot_entry")
-        textdata6.forEach((textdata6) => {
-            textdata6.classList.toggle("visible_element")
-        })
-        textdata6.forEach((textdata6) => {
-            textdata6.classList.toggle("hidenseek_element")
-        })
-    }
+
 }
 function backin5dialog() {
     let wmodal2 = document.getElementById("modal_txt4");
@@ -676,37 +580,17 @@ function backin5dialog() {
     let wmodal3 = document.getElementById("modal_txt5");
     wmodal3.classList.toggle("visible_element")
     wmodal3.classList.toggle("hidenseek_element")
-    let checkboxes2 = wmodal2.querySelectorAll("input[type=checkbox]")
     let checkboxes3 = wmodal3.querySelectorAll("input[type=checkbox]")
     let label3 = wmodal3.querySelectorAll("div.checkbox_row-active")
-    let label2 = wmodal2.querySelectorAll("div.checkbox_row-active")
-    document.getElementById("windows-4").setAttribute("disabled", true)
     document.getElementById("windows-5").setAttribute("disabled", true)
-    label2.forEach((label2) =>{
-        label2.classList.remove("checkbox_row-active")
-    })
     label3.forEach((label3) =>{
         label3.classList.remove("checkbox_row-active")
-    })
-    checkboxes2.forEach((checkboxes2) =>{
-        checkboxes2.checked = false
     })
     checkboxes3.forEach((checkboxes3) =>{
         checkboxes3.checked = false
     })
-    document.getElementById('check_part8').disabled = false,
-    document.getElementById('check_part_022').disabled = false;
     document.getElementById('check_part3').disabled = false;
     document.getElementById('check_part_033').disabled = false;
-    if (dataconcenttype == 1) {
-        let textdata4 = document.querySelectorAll("div.container_personal_data_consent")
-        textdata4.forEach((textdata4) => {
-            textdata4.classList.toggle("visible_element")
-        })
-        textdata4.forEach((textdata4) => {
-            textdata4.classList.toggle("hidenseek_element")
-        })
-    }
     if (cameratype == 1) {
         let textdata6 = document.querySelectorAll("div.container_camera")
         textdata6.forEach((textdata6) => {
@@ -724,20 +608,11 @@ function backin6dialog() {
     let wmodal3 = document.getElementById("modal_txt6");
     wmodal3.classList.toggle("visible_element")
     wmodal3.classList.toggle("hidenseek_element")
-    let checkboxes2 = wmodal2.querySelectorAll("input[type=checkbox]")
     let checkboxes3 = wmodal3.querySelectorAll("input[type=checkbox]")
     let label3 = wmodal3.querySelectorAll("div.checkbox_row-active")
-    let label2 = wmodal2.querySelectorAll("div.checkbox_row-active")
-    document.getElementById("windows-5").setAttribute("disabled", true)
     document.getElementById("windows-6").setAttribute("disabled", true)
-    label2.forEach((label2) =>{
-        label2.classList.remove("checkbox_row-active")
-    })
     label3.forEach((label3) =>{
         label3.classList.remove("checkbox_row-active")
-    })
-    checkboxes2.forEach((checkboxes2) =>{
-        checkboxes2.checked = false
     })
     checkboxes3.forEach((checkboxes3) =>{
         checkboxes3.checked = false
@@ -746,8 +621,7 @@ function backin6dialog() {
     document.getElementById('check_part6').disabled = false,
     document.getElementById('check_part7').disabled = false,
     document.getElementById('check_part_044').disabled = false;
-    document.getElementById('check_part3').disabled = false;
-    document.getElementById('check_part_033').disabled = false;
+
     if (biometrytype == 1) {
         let textdata4 = document.querySelectorAll("div.container_blockExamus")
         textdata4.forEach((textdata4) => {
@@ -773,15 +647,6 @@ function backin6dialog() {
         })
         textdata4.forEach((textdata4) => {
             textdata4.classList.toggle("hidenseek_element")
-        })
-    }
-    if (cameratype == 1) {
-        let textdata6 = document.querySelectorAll("div.container_camera")
-        textdata6.forEach((textdata6) => {
-            textdata6.classList.toggle("visible_element")
-        })
-        textdata6.forEach((textdata6) => {
-            textdata6.classList.toggle("hidenseek_element")
         })
     }
 }
@@ -792,61 +657,17 @@ function backin7dialog() {
     let wmodal3 = document.getElementById("modal_txt7");
     wmodal3.classList.toggle("visible_element")
     wmodal3.classList.toggle("hidenseek_element")
-    let checkboxes2 = wmodal2.querySelectorAll("input[type=checkbox]")
     let checkboxes3 = wmodal3.querySelectorAll("input[type=checkbox]")
     let label3 = wmodal3.querySelectorAll("div.checkbox_row-active")
-    let label2 = wmodal2.querySelectorAll("div.checkbox_row-active")
-    document.getElementById("windows-6").setAttribute("disabled", true)
     document.getElementById("windows-7").setAttribute("disabled", true)
-    label2.forEach((label2) =>{
-        label2.classList.remove("checkbox_row-active")
-    })
     label3.forEach((label3) =>{
         label3.classList.remove("checkbox_row-active")
-    })
-    checkboxes2.forEach((checkboxes2) =>{
-        checkboxes2.checked = false
     })
     checkboxes3.forEach((checkboxes3) =>{
         checkboxes3.checked = false
     })
-    document.getElementById('check_part5').disabled = false,
-    document.getElementById('check_part6').disabled = false,
-    document.getElementById('check_part7').disabled = false,
-    document.getElementById('check_part_044').disabled = false;
     document.getElementById('check_part12').disabled = false;
     document.getElementById('check_part_055').disabled = false;
-    let URLcheckbox = document.getElementById("check_part11").checked;
-    if (URLcheckbox == true) {
-        document.getElementById("check_part5").disabled = true
-    }
-    if (biometrytype == 1) {
-        let textdata4 = document.querySelectorAll("div.container_blockExamus")
-        textdata4.forEach((textdata4) => {
-            textdata4.classList.toggle("visible_element")
-        })
-        textdata4.forEach((textdata4) => {
-            textdata4.classList.toggle("hidenseek_element")
-        })
-    }
-    if (biometrytype == 2) {
-        let textdata4 = document.querySelectorAll("div.container_blockEBS")
-        textdata4.forEach((textdata4) => {
-            textdata4.classList.toggle("visible_element")
-        })
-        textdata4.forEach((textdata4) => {
-            textdata4.classList.toggle("hidenseek_element")
-        })
-    }
-    if (biometrytype == 3) {
-        let textdata4 = document.querySelectorAll("div.container_blockVLLuna")
-        textdata4.forEach((textdata4) => {
-            textdata4.classList.toggle("visible_element")
-        })
-        textdata4.forEach((textdata4) => {
-            textdata4.classList.toggle("hidenseek_element")
-        })
-    }
     if (instructiontype == 1) {
         let textdata6 = document.querySelectorAll("div.container_faq_block")
         textdata6.forEach((textdata6) => {
@@ -864,29 +685,17 @@ function backin8dialog() {
     let wmodal3 = document.getElementById("modal_txt8");
     wmodal3.classList.toggle("visible_element")
     wmodal3.classList.toggle("hidenseek_element")
-    let checkboxes2 = wmodal2.querySelectorAll("input[type=checkbox]")
     let checkboxes3 = wmodal3.querySelectorAll("input[type=checkbox]")
     let label3 = wmodal3.querySelectorAll("div.checkbox_row-active")
-    let label2 = wmodal2.querySelectorAll("div.checkbox_row-active")
-    document.getElementById("windows-7").setAttribute("disabled", true)
     document.getElementById("windows-8").setAttribute("disabled", true)
-    label2.forEach((label2) =>{
-        label2.classList.remove("checkbox_row-active")
-    })
     label3.forEach((label3) =>{
         label3.classList.remove("checkbox_row-active")
-    })
-    checkboxes2.forEach((checkboxes2) =>{
-        checkboxes2.checked = false
     })
     checkboxes3.forEach((checkboxes3) =>{
         checkboxes3.checked = false
     })
     document.getElementById('check_part13').disabled = false,
-    document.getElementById('check_part14').disabled = false,
-    document.getElementById('check_part12').disabled = false;
-    document.getElementById('check_part_055').disabled = false;
-
+    document.getElementById('check_part14').disabled = false
     if (contactstype == 1) {
         let emailfield = document.querySelectorAll("span.contact_field")
         emailfield.forEach((emailfield) => {
@@ -905,15 +714,7 @@ function backin8dialog() {
             emailfield.classList.toggle("hidenseek_element")
         })
     }
-    if (instructiontype == 1) {
-        let textdata6 = document.querySelectorAll("div.container_faq_block")
-        textdata6.forEach((textdata6) => {
-            textdata6.classList.toggle("visible_element")
-        })
-        textdata6.forEach((textdata6) => {
-            textdata6.classList.toggle("hidenseek_element")
-        })
-    }
+
 }
 function backin9dialog() {
     let wmodal2 = document.getElementById("modal_txt8");
@@ -922,20 +723,11 @@ function backin9dialog() {
     let wmodal3 = document.getElementById("modal_txt9");
     wmodal3.classList.toggle("visible_element")
     wmodal3.classList.toggle("hidenseek_element")
-    let checkboxes2 = wmodal2.querySelectorAll("input[type=checkbox]")
     let checkboxes3 = wmodal3.querySelectorAll("input[type=checkbox]")
     let label3 = wmodal3.querySelectorAll("div.checkbox_row-active")
-    let label2 = wmodal2.querySelectorAll("div.checkbox_row-active")
-    document.getElementById("windows-8").setAttribute("disabled", true)
     document.getElementById("windows-9").setAttribute("disabled", true)
-    label2.forEach((label2) =>{
-        label2.classList.remove("checkbox_row-active")
-    })
     label3.forEach((label3) =>{
         label3.classList.remove("checkbox_row-active")
-    })
-    checkboxes2.forEach((checkboxes2) =>{
-        checkboxes2.checked = false
     })
     checkboxes3.forEach((checkboxes3) =>{
         checkboxes3.checked = false
@@ -961,15 +753,6 @@ function backin9dialog() {
         })
         emailfield.forEach((emailfield) => {
             emailfield.classList.toggle("hidenseek_element")
-        })
-    }
-    if (instructiontype == 1) {
-        let textdata6 = document.querySelectorAll("div.container_faq_block")
-        textdata6.forEach((textdata6) => {
-            textdata6.classList.toggle("visible_element")
-        })
-        textdata6.forEach((textdata6) => {
-            textdata6.classList.toggle("hidenseek_element")
         })
     }
 }
